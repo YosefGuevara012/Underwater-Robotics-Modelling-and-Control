@@ -1,0 +1,68 @@
+%% here you can implement the code in order to have some figures ...
+%%
+close all
+figure(1)
+hold on
+grid on
+PosE_M2 = PosE_M(:,1:3)
+t = 0:0.01:10
+plot(t,PosE_M2)
+
+title('Measured Position vs time')
+xlabel('Time in (s)') 
+ylabel('Position in [m]') 
+legend({'surge','sway', 'heave'},'Location','southwest')
+
+figure(2)
+hold on
+grid on
+PosE_M2 = PosE_S(:,1:3)
+t = 0:0.01:10
+plot(t,PosE_M2)
+
+title('Simulated Position vs time')
+xlabel('Time in (s)') 
+ylabel('Position in [m]') 
+legend({'surge','sway', 'heave'},'Location','southwest')
+
+figure(3)
+hold on
+grid on
+PosE_M2 = PosE_M(:,4:6)
+t = 0:0.01:10
+plot(t,PosE_M2)
+
+title('Measured Oritation vs time')
+xlabel('Time in (s)') 
+ylabel('Oritation in radians') 
+legend({'roll','pitch', 'yaw'},'Location','southwest')
+
+figure(4)
+hold on
+grid on
+PosE_M2 = PosE_S(:,4:6)
+t = 0:0.01:10
+plot(t,PosE_M2)
+
+title('Simulated Oritation vs time')
+xlabel('Time in (s)') 
+ylabel('Oritation in radians') 
+legend({'roll','pitch', 'yaw'},'Location','southwest')
+
+figure(5)
+hold on
+grid on
+PosE_M2 = VitB_S(:,4:6)
+t = 0:0.01:10
+plot(t,PosE_M2)
+
+title('Simulated Oritation vs time')
+xlabel('Time in (s)') 
+ylabel('Oritation in radians') 
+legend({'roll','pitch', 'yaw'},'Location','southwest')
+
+
+
+
+
+
